@@ -12,26 +12,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.reservasiruangan.utils.PreferenceHelper;
-
-public class HalamanAwal extends AppCompatActivity
+public class HalamanDenah extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_halaman_awal);
+        setContentView(R.layout.activity_halaman_denah);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        PreferenceHelper pref = new PreferenceHelper(getApplicationContext())
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Harap tunggu progress selanjutnya", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -44,12 +40,6 @@ public class HalamanAwal extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        TextView nama = (TextView) findViewById(R.id.ininama);
-        nama.setText(pref.getNama());
-
-
-
     }
 
     @Override
@@ -58,14 +48,14 @@ public class HalamanAwal extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed ();
+            super.onBackPressed();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.halaman_awal, menu);
+        getMenuInflater().inflate(R.menu.halaman_denah, menu);
         return true;
     }
 
@@ -92,10 +82,7 @@ public class HalamanAwal extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
-
-
 
         } else if (id == R.id.nav_slideshow) {
 

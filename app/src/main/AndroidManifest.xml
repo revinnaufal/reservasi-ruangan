@@ -10,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register"></activity>
+        <activity
+            android:name=".HalamanDenah"
+            android:label="@string/title_activity_halaman_denah"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Register" />
         <activity
             android:name=".HalamanAwal"
             android:label="@string/title_activity_halaman_awal"

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.support.design.widget.Snackbar;
 
+import com.example.reservasiruangan.utils.PreferenceHelper;
+
 import static android.util.Log.*;
 import static android.widget.Toast.*;
 
@@ -55,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, HalamanAwal.class);
             startActivity(intent);
+            PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+            pref.setNama(username);
+
         }
     }
     public void masukregist(View view){
