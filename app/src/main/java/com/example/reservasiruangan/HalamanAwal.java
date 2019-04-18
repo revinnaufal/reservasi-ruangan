@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class HalamanAwal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -48,7 +49,7 @@ public class HalamanAwal extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            super.onBackPressed ();
         }
     }
 
@@ -82,6 +83,7 @@ public class HalamanAwal extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
