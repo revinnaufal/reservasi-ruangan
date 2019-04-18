@@ -56,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, HalamanAwal.class);
             startActivity(intent);
         }
-
-
+    }
+    public void masukregist(View view){
+        Intent masuk = new Intent(this, Register.class);
+        startActivity(masuk);
 
     }
 }

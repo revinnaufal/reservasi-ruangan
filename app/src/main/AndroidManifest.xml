@@ -10,15 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Register"></activity>
         <activity
             android:name=".HalamanAwal"
             android:label="@string/title_activity_halaman_awal"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.reservasiruangan.MainActivity"></meta-data>
-
+                android:value="com.example.reservasiruangan.MainActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

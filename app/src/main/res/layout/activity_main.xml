@@ -73,9 +73,10 @@
                 android:text="Sign In" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/registbut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="masukregist"
                 android:text="REGISTER" />
 
         </LinearLayout>
