@@ -12,7 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.reservasiruangan.utils.PreferenceHelper;
 
 public class HalamanAwal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,7 +26,7 @@ public class HalamanAwal extends AppCompatActivity
         setContentView(R.layout.activity_halaman_awal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext())
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +44,12 @@ public class HalamanAwal extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView nama = (TextView) findViewById(R.id.ininama);
+        nama.setText(pref.getNama());
+
+
+
     }
 
     @Override
