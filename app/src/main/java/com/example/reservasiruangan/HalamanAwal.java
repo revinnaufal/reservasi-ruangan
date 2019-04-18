@@ -86,6 +86,8 @@ public class HalamanAwal extends AppCompatActivity
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_gallery) {
 
+
+
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
