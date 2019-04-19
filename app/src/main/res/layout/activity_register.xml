@@ -10,7 +10,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_centerHorizontal="false"
         android:orientation="vertical">
 
         <TextView
@@ -59,7 +58,7 @@
             android:text="Password" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/passwordtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -72,7 +71,7 @@
             android:text="Email" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/emailtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -82,6 +81,7 @@
             android:id="@+id/buttonregist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="daftar"
             android:text="Register" />
 
     </LinearLayout>

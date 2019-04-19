@@ -1,15 +1,16 @@
 package com.example.reservasiruangan;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -20,13 +21,19 @@ import com.example.reservasiruangan.utils.PreferenceHelper;
 public class HalamanAwal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public void masukkedenah (View view){
+        Intent denahintent = new Intent(this, HalamanDenah.class);
+        startActivity(denahintent);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_halaman_awal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        PreferenceHelper pref = new PreferenceHelper(getApplicationContext())
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,11 +52,6 @@ public class HalamanAwal extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        TextView nama = (TextView) findViewById(R.id.ininama);
-        nama.setText(pref.getNama());
-
-
-
     }
 
     @Override
@@ -66,6 +68,13 @@ public class HalamanAwal extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.halaman_awal, menu);
+
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        TextView nama = (TextView) findViewById(R.id.ininama);
+        TextView email = (TextView) findViewById(R.id.textView) ;
+        nama.setText(pref.getNama());
+        email.setText(pref.getEmail());
+
         return true;
     }
 
@@ -90,20 +99,16 @@ public class HalamanAwal extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_booking) {
             // Handle the camera action
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_setting) {
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_aboutus) {
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
-
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_logout) {
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         }
 

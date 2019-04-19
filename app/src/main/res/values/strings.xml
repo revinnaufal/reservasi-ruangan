@@ -8,4 +8,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_halaman_denah">HalamanDenah</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">2LfUWSo91KtuTOfxR6QJtvfpTolOsdaz2V9oWinD</string>
+    <string name="back4app_client_key">qmAYd4XP5WRXuBBYraFj8PrBYjt3VjznDf7SPRPZ</string>
+
 </resources>
