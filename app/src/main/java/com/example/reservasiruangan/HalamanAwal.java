@@ -1,11 +1,14 @@
 package com.example.reservasiruangan;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,6 +27,7 @@ public class HalamanAwal extends AppCompatActivity
     public void masukkedenah (View view){
         Intent denahintent = new Intent(this, HalamanDenah.class);
         startActivity(denahintent);
+        finish();
 
     }
 
@@ -60,7 +64,25 @@ public class HalamanAwal extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed ();
+
+            //Ini pas mencet back bakal muncul notifikasi yakin mau logout atau nggak?
+
+            new AlertDialog.Builder(HalamanAwal.this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Logout Notification")
+                    .setMessage("Apakah anda yakin akan logout?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Intent home = new Intent(HalamanAwal.this,MainActivity.class);
+                            //startActivity(home);
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No",null)
+                    .show();
+
+            //super.onBackPressed ();
         }
     }
 
@@ -108,7 +130,24 @@ public class HalamanAwal extends AppCompatActivity
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_logout) {
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+
+            new AlertDialog.Builder(HalamanAwal.this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Logout Notification")
+                    .setMessage("Apakah anda yakin akan logout?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Intent home = new Intent(HalamanAwal.this,MainActivity.class);
+                            //startActivity(home);
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No",null)
+                    .show();
+
+
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         }
 

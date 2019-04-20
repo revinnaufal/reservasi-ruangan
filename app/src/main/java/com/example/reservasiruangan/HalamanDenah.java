@@ -1,5 +1,7 @@
 package com.example.reservasiruangan;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.reservasiruangan.utils.PreferenceHelper;
@@ -7,6 +9,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -53,6 +57,8 @@ public class HalamanDenah extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            Intent HalamanAwal = new Intent(HalamanDenah.this, com.example.reservasiruangan.HalamanAwal.class);
+            startActivity(HalamanAwal);
         }
     }
 
@@ -100,7 +106,23 @@ public class HalamanDenah extends AppCompatActivity
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_logout) {
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+
+
+            new AlertDialog.Builder(HalamanDenah.this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Logout Notification")
+                    .setMessage("Apakah anda yakin akan logout?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Intent home = new Intent(HalamanAwal.this,MainActivity.class);
+                            //startActivity(home);
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No",null)
+                    .show();
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         }
 
