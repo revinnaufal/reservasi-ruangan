@@ -96,4 +96,18 @@
         android:layout_marginTop="3dp"
         android:text="Rizwan Herliady (1101120224)" />
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="125dp"
+        android:maxHeight="125dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/telu" />
+
 </RelativeLayout>

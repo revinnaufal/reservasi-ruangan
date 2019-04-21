@@ -127,10 +127,10 @@ public class HalamanAwal extends AppCompatActivity
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+
 
             Intent cacat = new Intent(HalamanAwal.this,aboutus.class);
-            startActivity(cacat);
+            startActivity(cacat); finish();
         } else if (id == R.id.nav_logout) {
 
             new AlertDialog.Builder(HalamanAwal.this)

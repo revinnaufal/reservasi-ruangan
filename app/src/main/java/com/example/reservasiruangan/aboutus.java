@@ -1,7 +1,10 @@
 package com.example.reservasiruangan;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -9,6 +12,7 @@ import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -17,6 +21,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class aboutus extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +59,9 @@ public class aboutus extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+
+            Intent bebas = new Intent(aboutus.this,HalamanAwal.class);
+            startActivity(bebas);
             super.onBackPressed();
         }
     }
@@ -61,6 +70,11 @@ public class aboutus extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.aboutus, menu);
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        TextView nama = (TextView) findViewById(R.id.ininama);
+        TextView email = (TextView) findViewById(R.id.textView) ;
+        nama.setText(pref.getNama());
+        email.setText(pref.getEmail());
         return true;
     }
 
@@ -85,20 +99,37 @@ public class aboutus extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+         if (id == R.id.nav_booking) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_setting) {
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_aboutus) {
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+            Intent cacat = new Intent(aboutus.this,aboutus.class);
+            startActivity(cacat); finish();
+        } else if (id == R.id.nav_logout) {
 
-        } else if (id == R.id.nav_share) {
+            new AlertDialog.Builder(aboutus.this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Logout Notification")
+                    .setMessage("Apakah anda yakin akan logout?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Intent home = new Intent(HalamanAwal.this,MainActivity.class);
+                            //startActivity(home);
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No",null)
+                    .show();
 
-        } else if (id == R.id.nav_send) {
+
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
