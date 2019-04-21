@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
 
                         String inistring = user.getString("nama");
 
+
                         Toast.makeText(MainActivity.this,"Login berhasil. Selamat Datang\n" +inistring,Toast.LENGTH_SHORT).show();
                         Intent halamanawal = new Intent(MainActivity.this, HalamanAwal.class);
                         startActivity(halamanawal);

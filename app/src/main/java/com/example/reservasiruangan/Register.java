@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -40,6 +41,7 @@ public class Register extends AppCompatActivity {
             user.setEmail(emailstring);
             user.put("nama",namalengkapstring);
 
+            ParseObject<ParseObject>  = new ParseObject("TABEL")
             user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
