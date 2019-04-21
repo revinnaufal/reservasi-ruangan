@@ -94,11 +94,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginRight="12dp"
         android:layout_marginBottom="12dp"
+        android:layout_toLeftOf="@+id/imageView2"
         android:adjustViewBounds="true"
         android:maxWidth="85dp"
         android:maxHeight="85dp"
         android:scaleType="fitCenter"
-        android:layout_toLeftOf="@+id/imageView2"
         app:srcCompat="@drawable/telu" />
 
     <ImageView

@@ -13,5 +13,6 @@
     <!-- Change the following strings as required -->
     <string name="back4app_app_id">2LfUWSo91KtuTOfxR6QJtvfpTolOsdaz2V9oWinD</string>
     <string name="back4app_client_key">qmAYd4XP5WRXuBBYraFj8PrBYjt3VjznDf7SPRPZ</string>
+    <string name="title_activity_aboutus">aboutus</string>
 
 </resources>
