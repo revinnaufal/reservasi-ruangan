@@ -18,11 +18,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class HalamanDenah extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    public void p106 (View view){
+
+        Button bebas = (Button) findViewById(R.id.P106);
+
+        String namaruangan = bebas.getText().toString();
+
+        if(namaruangan.matches("P106")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, HalamanAwal.class);
+            startActivity(bebas1);
+
+        }
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
