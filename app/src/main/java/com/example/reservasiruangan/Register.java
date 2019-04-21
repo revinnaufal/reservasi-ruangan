@@ -41,7 +41,7 @@ public class Register extends AppCompatActivity {
             user.setEmail(emailstring);
             user.put("nama",namalengkapstring);
 
-            ParseObject<ParseObject>  = new ParseObject("TABEL")
+
             user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
