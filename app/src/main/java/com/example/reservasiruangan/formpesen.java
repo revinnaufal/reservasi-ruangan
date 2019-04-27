@@ -105,7 +105,7 @@ public class formpesen extends AppCompatActivity
             startActivity(cacat); finish();
         } else if (id == R.id.nav_logout) {
 
-            new AlertDialog.Builder(formpesen.this)
+            new AlertDialog.Builder(formpesengi.this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("Logout Notification")
                     .setMessage("Apakah anda yakin akan logout?")
