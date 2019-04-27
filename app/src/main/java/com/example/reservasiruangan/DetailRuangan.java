@@ -37,43 +37,107 @@ public class DetailRuangan extends AppCompatActivity
 
 
     }
+    public TextView namaruangan,spesifikasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_detail_ruangan);
 
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
-        TextView namaruangan = (TextView) findViewById(R.id.ancol);
+        namaruangan = (TextView) findViewById(R.id.ancol);
+        spesifikasi = findViewById(R.id.spesifikasi);
+        String kotakbantu = pref.getRuangan();
+
+        //IF ELSE BUAT RUANGAN
+        if (kotakbantu.matches("P107")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTerdapat 50 Bangku\n"+
+                    "2.\tPapan Tulis Mantap");
+
+        }
+        else if(kotakbantu.matches("P313")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya ademmmmmmmmmm\n"+
+                    "2.\tPapan Tulis Mantap");
+
+        }
+        else if(kotakbantu.matches("P401")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya ademmmmmmmmmm sari\n"+
+                    "2.\tPapan Tulis Mantap mantul mantul sekali");
+
+        }
+        else if(kotakbantu.matches("P402")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya sempit banget\n"+
+                    "2.\tPapan Tulis ancur ");
+
+        }
+        else if(kotakbantu.matches("P403")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya jauh\n"+
+                    "2.\tPapan Tulis gabisa dihapus");
+
+        }
+        else if(kotakbantu.matches("P404")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya para kucing berkeliaran\n"+
+                    "2.\tPapan Tulis tercakar kocheng");
+
+        }
+        else if(kotakbantu.matches("P405")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya tinggi, tinggi sekaleeee\n"+
+                    "2.\tPapan Tulis Mantap banyak pohon cemara");
+
+        }
+        else if(kotakbantu.matches("P406")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya gak bisa dibuka\n"+
+                    "2.\tPapan Tulis ilang");
+
+        }
+        else if(kotakbantu.matches("N112")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya enak\n"+
+                    "2.\tPapan Tulis Mantap");
+
+        }
+        else if(kotakbantu.matches("N309")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya luas\n"+
+                    "2.\tPapan Tulis memantap dan memantul");
+
+        }
+        else if(kotakbantu.matches("N313")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya bersih\n"+
+                    "2.\tPapan Tulis Mantap mantap mantap");
+
+        }
+        else if(kotakbantu.matches("O101")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya kane\n"+
+                    "2.\tPapan Tulis mantul");
+
+        }
+
+        //PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        //TextView namaruangan = (TextView) findViewById(R.id.ancol);
         //TextView lala = findViewById(R.id.spesifikasi);
         //String namaruangan = namaruanganbelumstring.toString();
 
         //lala.setText("WAW");
         //namaruangan.setText("P106");
-        Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_LONG).show();
 
 
-        setContentView(R.layout.activity_detail_ruangan);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setContentView(R.layout.activity_detail_ruangan);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override

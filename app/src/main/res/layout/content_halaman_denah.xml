@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/imageView5"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-4dp"
         android:orientation="vertical">
 
         <ScrollView
@@ -54,12 +55,12 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/P106"
+                        android:id="@+id/p107"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:onClick="p106"
-                        android:text="p106" />
+                        android:onClick="p107"
+                        android:text="P107" />
 
                 </LinearLayout>
 
@@ -70,56 +71,83 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/p302"
+                        android:id="@+id/p313"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="P302" />
-
-                    <Button
-                        android:id="@+id/p303"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="P303" />
+                        android:onClick="p313"
+                        android:text="P313" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:background="#ffffff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
                     android:orientation="horizontal">
 
-                    <Button
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                        android:id="@+id/p402"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:text="P402" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/p403"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:text="P403" />
+                            <Button
 
-                    <Button
-                        android:id="@+id/p404"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:text="P404" />
+                                android:id="@+id/p401"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:onClick="p401"
+                                android:text="P401" />
 
-                    <Button
-                        android:id="@+id/p405"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:text="P405" />
+                            <Button
+                                android:id="@+id/p402"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:onClick="p402"
+                                android:text="P402" />
+
+                            <Button
+                                android:id="@+id/p403"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:onClick="p403"
+                                android:text="P403" />
+
+                            <Button
+                                android:id="@+id/p404"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:onClick="p404"
+                                android:text="P404" />
+
+                            <Button
+                                android:id="@+id/p405"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:onClick="p405"
+                                android:text="P405" />
+
+                            <Button
+                                android:id="@+id/p406"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:onClick="p406"
+                                android:text="P406" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
                 </LinearLayout>
 
                 <TextView
@@ -137,11 +165,12 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/o102"
+                        android:id="@+id/o101"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="O102" />
+                        android:onClick="o101"
+                        android:text="O101" />
 
                 </LinearLayout>
 
@@ -164,8 +193,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:onClick="n112"
                         android:text="N112" />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/n309"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:onClick="n309"
+                        android:text="N309" />
+
+                    <Button
+                        android:id="@+id/n313"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:onClick="n313"
+                        android:text="N313" />
                 </LinearLayout>
 
             </LinearLayout>
