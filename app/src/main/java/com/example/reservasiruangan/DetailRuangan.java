@@ -38,22 +38,35 @@ public class DetailRuangan extends AppCompatActivity
 
     }
 
+    public TextView namaruangan,spesifikasi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_detail_ruangan);
 
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
-        TextView namaruangan = (TextView) findViewById(R.id.ancol);
-        //TextView lala = findViewById(R.id.spesifikasi);
-        //String namaruangan = namaruanganbelumstring.toString();
+        namaruangan = (TextView) findViewById(R.id.ancol);
+        spesifikasi = findViewById(R.id.spesifikasi);
+        String kotakbantu = pref.getRuangan();
 
-        //lala.setText("WAW");
-        //namaruangan.setText("P106");
+        //IF ELSE BUAT RUANGAN
+        if (kotakbantu.matches("P106")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTerdapat 50 Bangku\n"+
+                    "2.\tPapan Tulis Mantap");
+
+        } else if(kotakbantu.matches("N112")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya enak\n"+
+                    "2.\tPapan Tulis Mantap");
+
+        }
+
+
+
+
         Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_LONG).show();
-
-
-        setContentView(R.layout.activity_detail_ruangan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -129,7 +142,6 @@ public class DetailRuangan extends AppCompatActivity
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {
-
 
             Intent cacat = new Intent(DetailRuangan.this,aboutus.class);
             startActivity(cacat); finish();

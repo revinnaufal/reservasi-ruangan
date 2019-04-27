@@ -36,18 +36,35 @@ public class HalamanDenah extends AppCompatActivity
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
         pref.setRuangan(namaruangan);
 
-        if(namaruangan.matches("p106")){
+        if(namaruangan.matches("P106")){
 
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
 
+        }
 
+
+    }
+    public void n112 (View view){
+
+        Button bebas = (Button) findViewById(R.id.n112);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("N112")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
 
         }
 
 
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:onClick="p106"
-                        android:text="p106" />
+                        android:text="P106" />
 
                 </LinearLayout>
 
@@ -164,6 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:onClick="n112"
                         android:text="N112" />
 
                 </LinearLayout>
