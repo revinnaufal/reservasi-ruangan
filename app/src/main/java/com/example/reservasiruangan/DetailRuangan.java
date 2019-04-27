@@ -39,6 +39,8 @@ public class DetailRuangan extends AppCompatActivity
     }
     public TextView namaruangan,spesifikasi;
 
+    public TextView namaruangan,spesifikasi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,7 @@ public class DetailRuangan extends AppCompatActivity
         namaruangan = (TextView) findViewById(R.id.ancol);
         spesifikasi = findViewById(R.id.spesifikasi);
         String kotakbantu = pref.getRuangan();
+<<<<<<< HEAD
 
         //IF ELSE BUAT RUANGAN
         if (kotakbantu.matches("P107")){
@@ -131,11 +134,43 @@ public class DetailRuangan extends AppCompatActivity
         //lala.setText("WAW");
         //namaruangan.setText("P106");
         //Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_LONG).show();
+=======
 
+        //IF ELSE BUAT RUANGAN
+        if (kotakbantu.matches("P106")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTerdapat 50 Bangku\n"+
+                    "2.\tPapan Tulis Mantap");
+>>>>>>> e1511372c709307a2ef40b6f085d337a68d1d00e
 
+        } else if(kotakbantu.matches("N112")){
+            namaruangan.setText(kotakbantu);
+            spesifikasi.setText("1.\tTempatnya enak\n"+
+                    "2.\tPapan Tulis Mantap");
+
+<<<<<<< HEAD
         //setContentView(R.layout.activity_detail_ruangan);
        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+=======
+        }
+
+
+
+
+        Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_LONG).show();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+>>>>>>> e1511372c709307a2ef40b6f085d337a68d1d00e
 
 
     }
@@ -193,7 +228,6 @@ public class DetailRuangan extends AppCompatActivity
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {
-
 
             Intent cacat = new Intent(DetailRuangan.this,aboutus.class);
             startActivity(cacat); finish();

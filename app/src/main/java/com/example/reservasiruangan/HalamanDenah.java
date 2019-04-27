@@ -36,6 +36,7 @@ public class HalamanDenah extends AppCompatActivity
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
         pref.setRuangan(namaruangan);
 
+<<<<<<< HEAD
         if(namaruangan.matches("P107")){
 
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
@@ -257,17 +258,37 @@ public class HalamanDenah extends AppCompatActivity
         pref.setRuangan(namaruangan);
 
         if(namaruangan.matches("N313")){
+=======
+        if(namaruangan.matches("P106")){
+>>>>>>> e1511372c709307a2ef40b6f085d337a68d1d00e
 
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
 
+        }
 
+
+    }
+    public void n112 (View view){
+
+        Button bebas = (Button) findViewById(R.id.n112);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("N112")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
 
         }
 
 
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
