@@ -54,10 +54,11 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/p106"
+                        android:id="@+id/P106"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:onClick="p106"
                         android:text="p106" />
 
                 </LinearLayout>

@@ -1,58 +1,31 @@
 package com.example.reservasiruangan;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import android.util.Log;
 import android.view.View;
+
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class HalamanDenah extends AppCompatActivity
+public class formpesen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
-    public void p106 (View view){
-
-        Button bebas = (Button) findViewById(R.id.P106);
-
-        String namaruangan = bebas.getText().toString();
-        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
-        pref.setRuangan(namaruangan);
-
-        if(namaruangan.matches("p106")){
-
-            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
-            startActivity(bebas1);
-            finish();
-
-
-
-        }
-
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_halaman_denah);
+        setContentView(R.layout.activity_formpesen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -82,22 +55,13 @@ public class HalamanDenah extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-            Intent HalamanAwal = new Intent(HalamanDenah.this, com.example.reservasiruangan.HalamanAwal.class);
-            startActivity(HalamanAwal);
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.halaman_denah, menu);
-
-
-        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
-        TextView nama = (TextView) findViewById(R.id.ininama);
-        TextView email = (TextView) findViewById(R.id.textView) ;
-        nama.setText(pref.getNama());
-        email.setText(pref.getEmail());
+        getMenuInflater().inflate(R.menu.formpesen, menu);
         return true;
     }
 
@@ -122,32 +86,17 @@ public class HalamanDenah extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_booking) {
+        if (id == R.id.nav_camera) {
             // Handle the camera action
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_setting) {
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_aboutus) {
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_slideshow) {
 
+        } else if (id == R.id.nav_manage) {
 
-            new AlertDialog.Builder(HalamanDenah.this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle("Logout Notification")
-                    .setMessage("Apakah anda yakin akan logout?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //Intent home = new Intent(HalamanAwal.this,MainActivity.class);
-                            //startActivity(home);
-                            finish();
-                        }
-                    })
-                    .setNegativeButton("No",null)
-                    .show();
-            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
 
         }
 

@@ -15,9 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".formpesen"
+            android:label="@string/title_activity_formpesen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DetailRuangan"
+            android:label="@string/title_activity_detail_ruangan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".aboutus"
             android:label="@string/title_activity_aboutus"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HalamanDenah"
             android:label="@string/title_activity_halaman_denah"

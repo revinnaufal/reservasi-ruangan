@@ -8,8 +8,8 @@ import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import android.util.Log;
 import android.view.View;
+
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -18,33 +18,22 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HalamanDenah extends AppCompatActivity
+import org.w3c.dom.Text;
+
+public class DetailRuangan extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public void menujukeform(View view){
 
-    public void p106 (View view){
-
-        Button bebas = (Button) findViewById(R.id.P106);
-
-        String namaruangan = bebas.getText().toString();
-        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
-        pref.setRuangan(namaruangan);
-
-        if(namaruangan.matches("p106")){
-
-            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
-            startActivity(bebas1);
-            finish();
-
-
-
-        }
+        Intent lalala = new Intent(this, formpesen.class);
+        startActivity(lalala);
+        finish();
 
 
     }
@@ -52,7 +41,19 @@ public class HalamanDenah extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_halaman_denah);
+
+
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        TextView namaruangan = (TextView) findViewById(R.id.ancol);
+        //TextView lala = findViewById(R.id.spesifikasi);
+        //String namaruangan = namaruanganbelumstring.toString();
+
+        //lala.setText("WAW");
+        //namaruangan.setText("P106");
+        Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_LONG).show();
+
+
+        setContentView(R.layout.activity_detail_ruangan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -81,18 +82,18 @@ public class HalamanDenah extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+
+            Intent variabel = new Intent(DetailRuangan.this, HalamanDenah.class);
+            startActivity(variabel);
+            finish();
             super.onBackPressed();
-            Intent HalamanAwal = new Intent(HalamanDenah.this, com.example.reservasiruangan.HalamanAwal.class);
-            startActivity(HalamanAwal);
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.halaman_denah, menu);
-
-
+        getMenuInflater().inflate(R.menu.detail_ruangan, menu);
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
         TextView nama = (TextView) findViewById(R.id.ininama);
         TextView email = (TextView) findViewById(R.id.textView) ;
@@ -128,12 +129,13 @@ public class HalamanDenah extends AppCompatActivity
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
+
+            Intent cacat = new Intent(DetailRuangan.this,aboutus.class);
+            startActivity(cacat); finish();
         } else if (id == R.id.nav_logout) {
 
-
-            new AlertDialog.Builder(HalamanDenah.this)
+            new AlertDialog.Builder(DetailRuangan.this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("Logout Notification")
                     .setMessage("Apakah anda yakin akan logout?")
@@ -147,6 +149,8 @@ public class HalamanDenah extends AppCompatActivity
                     })
                     .setNegativeButton("No",null)
                     .show();
+
+
             //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
         }
