@@ -59,13 +59,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-<<<<<<< HEAD
+
                         android:onClick="p107"
                         android:text="P107" />
-=======
-                        android:onClick="p106"
-                        android:text="P106" />
->>>>>>> e1511372c709307a2ef40b6f085d337a68d1d00e
+
+
 
                 </LinearLayout>
 

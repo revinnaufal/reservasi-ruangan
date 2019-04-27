@@ -36,16 +36,13 @@ public class HalamanDenah extends AppCompatActivity
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
         pref.setRuangan(namaruangan);
 
-<<<<<<< HEAD
+
         if(namaruangan.matches("P107")){
 
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
-
-        }
+                    }
 
 
     }
@@ -62,8 +59,6 @@ public class HalamanDenah extends AppCompatActivity
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
 
         }
 
@@ -103,11 +98,7 @@ public class HalamanDenah extends AppCompatActivity
             startActivity(bebas1);
             finish();
 
-
-
         }
-
-
     }
     public void p403 (View view){
 
@@ -122,8 +113,6 @@ public class HalamanDenah extends AppCompatActivity
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
 
         }
 
@@ -142,12 +131,7 @@ public class HalamanDenah extends AppCompatActivity
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
-
         }
-
-
     }
     public void p405 (View view){
 
@@ -162,12 +146,7 @@ public class HalamanDenah extends AppCompatActivity
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
-
         }
-
-
     }
     public void p406 (View view){
 
@@ -182,11 +161,7 @@ public class HalamanDenah extends AppCompatActivity
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
-
         }
-
 
     }
     public void o101 (View view){
@@ -202,33 +177,9 @@ public class HalamanDenah extends AppCompatActivity
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
             finish();
-
-
-
         }
-
-
     }
-    public void n112 (View view){
 
-        Button bebas = (Button) findViewById(R.id.n112);
-
-        String namaruangan = bebas.getText().toString();
-        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
-        pref.setRuangan(namaruangan);
-
-        if(namaruangan.matches("N112")){
-
-            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
-            startActivity(bebas1);
-            finish();
-
-
-
-        }
-
-
-    }
     public void n309 (View view){
 
         Button bebas = (Button) findViewById(R.id.n309);
@@ -243,11 +194,7 @@ public class HalamanDenah extends AppCompatActivity
             startActivity(bebas1);
             finish();
 
-
-
         }
-
-
     }
     public void n313 (View view){
 
@@ -258,9 +205,8 @@ public class HalamanDenah extends AppCompatActivity
         pref.setRuangan(namaruangan);
 
         if(namaruangan.matches("N313")){
-=======
+
         if(namaruangan.matches("P106")){
->>>>>>> e1511372c709307a2ef40b6f085d337a68d1d00e
 
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
@@ -268,8 +214,7 @@ public class HalamanDenah extends AppCompatActivity
 
         }
 
-
-    }
+    }}
     public void n112 (View view){
 
         Button bebas = (Button) findViewById(R.id.n112);
