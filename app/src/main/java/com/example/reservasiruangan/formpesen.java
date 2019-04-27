@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -20,18 +21,36 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class formpesen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public TextView nama,nim,ruangan, nama2;
+    public PreferenceHelper pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formpesen);
+
+        pref = new PreferenceHelper(getApplicationContext());
+        nama = (TextView) findViewById(R.id.textNamaget);
+        nim = (TextView) findViewById(R.id.textNIMget);
+        ruangan = (TextView) findViewById(R.id.ruangan);
+        nama.setText(pref.getNama());
+        nim.setText(pref.getEmail());
+        ruangan.setText(pref.getRuangan());
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +89,11 @@ public class formpesen extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.formpesen, menu);
+        pref = new PreferenceHelper(getApplicationContext());
+        nama2 = (TextView) findViewById(R.id.ininama);
+        TextView email = (TextView) findViewById(R.id.textView) ;
+        nama2.setText(pref.getNama());
+        email.setText(pref.getEmail());
         return true;
     }
 
@@ -105,7 +129,7 @@ public class formpesen extends AppCompatActivity
             startActivity(cacat); finish();
         } else if (id == R.id.nav_logout) {
 
-            new AlertDialog.Builder(formpesengi.this)
+            new AlertDialog.Builder(formpesen.this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("Logout Notification")
                     .setMessage("Apakah anda yakin akan logout?")
