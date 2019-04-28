@@ -46,6 +46,13 @@ public class formpesen extends AppCompatActivity
     public SimpleDateFormat dateFormatter;
     public ImageView kalender;
 
+    public void pdfandgenerate(View view){
+
+        Intent pdf = new Intent(this,ReceiptReview.class);
+        startActivity(pdf);
+
+    }
+
     public void showDateDialog(View view){
 
         Calendar newCalendar = Calendar.getInstance();

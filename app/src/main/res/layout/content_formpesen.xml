@@ -197,11 +197,12 @@
             android:background="@drawable/box"/>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/book"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
+            android:onClick="pdfandgenerate"
             android:padding="5dp"
             android:text="BOOK"
             android:textSize="14sp" />
