@@ -1,5 +1,6 @@
 package com.example.reservasiruangan;
 
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,16 +22,47 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class formpesen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public TextView nama,nim,ruangan, nama2;
+    public TextView nama,nim,ruangan, nama2, tanggal;
     public PreferenceHelper pref;
+    public DatePickerDialog datePickerDialog;
+    public SimpleDateFormat dateFormatter;
+    public ImageView kalender;
+
+    public void showDateDialog(View view){
+
+        Calendar newCalendar = Calendar.getInstance();
+        datePickerDialog = new DatePickerDialog(formpesen.this, new DatePickerDialog.OnDateSetListener(){
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth){
+
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                tanggal.setText(dateFormatter.format(newDate.getTime()));
+
+            }
+
+
+        },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        datePickerDialog.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +76,38 @@ public class formpesen extends AppCompatActivity
         nama.setText(pref.getNama());
         nim.setText(pref.getEmail());
         ruangan.setText(pref.getRuangan());
+
+        //Definissin Spinner
+        Spinner spin = (Spinner) findViewById(R.id.spinner);
+        Spinner spin2 = (Spinner) findViewById(R.id.spinner2);
+        //spin.setOnItemClickListener(this);
+        ArrayList<String> shift = new ArrayList<String>();
+        shift.add("06.30");
+        shift.add("09.30");
+        shift.add("12.30");
+        shift.add("15.30");
+
+        //Spinner Pertama
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,shift);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(arrayAdapter);
+        spin2.setAdapter(arrayAdapter);
+
+
+        //onNothingSelected();
+
+        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.JAPANESE);
+        tanggal = (TextView) findViewById(R.id.texttanggalget);
+        kalender = (ImageView) findViewById(R.id.imageView6);
+        /*kalender.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick2(View view){
+                showDateDialog();
+
+            }
+
+        });*/
+
 
 
 
@@ -70,6 +134,14 @@ public class formpesen extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+/*
+    private void onNothingSelected(AdapterView<?> parent) {
+        Toast.makeText(this,"Silahkan pilih shift ",Toast.LENGTH_SHORT).show();
+    }
+
+*/
+
+
 
     @Override
     public void onBackPressed() {
