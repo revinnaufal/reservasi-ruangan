@@ -206,7 +206,7 @@ public class HalamanDenah extends AppCompatActivity
 
         if(namaruangan.matches("N313")){
 
-        if(namaruangan.matches("P106")){
+
 
             Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
             startActivity(bebas1);
@@ -214,7 +214,7 @@ public class HalamanDenah extends AppCompatActivity
 
         }
 
-    }}
+    }
     public void n112 (View view){
 
         Button bebas = (Button) findViewById(R.id.n112);

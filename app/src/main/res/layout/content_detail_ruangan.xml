@@ -15,7 +15,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
         android:text="P107"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="#000000"/>
 
     <LinearLayout
         android:id="@+id/ancol2"
@@ -36,6 +37,17 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="269dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/pppp" />
+
+                <ImageView
                     android:id="@+id/imageView10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -54,21 +66,47 @@
                     android:adjustViewBounds="true"
                     android:maxHeight="269dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/pp" />
+                    app:srcCompat="@drawable/ppp" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="355dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/p" />
+
             </LinearLayout>
         </HorizontalScrollView>
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/spesifikasi"
+        android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ancol2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:text="Fasilitas Ruangan:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/spesifikasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="16dp"
         android:text="INI SPESIFIKASI"
-        android:textSize="30sp" />
+        android:textColor="#000000"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/button"

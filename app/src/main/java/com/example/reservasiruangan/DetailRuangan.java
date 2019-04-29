@@ -54,74 +54,122 @@ public class DetailRuangan extends AppCompatActivity
         //IF ELSE BUAT RUANGAN
         if (kotakbantu.matches("P107")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTerdapat 50 Bangku\n"+
-                    "2.\tPapan Tulis Mantap");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P313")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya ademmmmmmmmmm\n"+
-                    "2.\tPapan Tulis Mantap");
+            spesifikasi.setText(
+                    "1.\tJumlah Kursi        :50\n"+
+                    "2.\tProyektor           : Ada\n"+
+                    "3.\tKabel Proyektor     : HDMI&VGA\n"+
+                    "4.\tPapan Tulis         : Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC                  : Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P401")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya ademmmmmmmmmm sari\n"+
-                    "2.\tPapan Tulis Mantap mantul mantul sekali");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P402")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya sempit banget\n"+
-                    "2.\tPapan Tulis ancur ");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P403")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya jauh\n"+
-                    "2.\tPapan Tulis gabisa dihapus");
-
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
         }
         else if(kotakbantu.matches("P404")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya para kucing berkeliaran\n"+
-                    "2.\tPapan Tulis tercakar kocheng");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P405")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya tinggi, tinggi sekaleeee\n"+
-                    "2.\tPapan Tulis Mantap banyak pohon cemara");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P406")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya gak bisa dibuka\n"+
-                    "2.\tPapan Tulis ilang");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("N112")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya enak\n"+
-                    "2.\tPapan Tulis Mantap");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("N309")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya luas\n"+
-                    "2.\tPapan Tulis memantap dan memantul");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("N313")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya bersih\n"+
-                    "2.\tPapan Tulis Mantap mantap mantap");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                    "2.\tProyektor: Ada\n"+
+                    "3.\tKabel Proyektor: HDMI&VGA\n"+
+                    "4.\tPapan Tulis: Ada\n"+
+                    "5.\tSpidol dan Penghapus: Ada\n"+
+                    "6.\tAC: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("O101")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tTempatnya kane\n"+
-                    "2.\tPapan Tulis mantul");
+            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
+                "2.\tProyektor: Ada\n"+
+                "3.\tKabel Proyektor: HDMI&VGA\n"+
+                "4.\tPapan Tulis: Ada\n"+
+                "5.\tSpidol dan Penghapus: Ada\n"+
+                "6.\tAC: Tidak Aada\n");
 
         }
 
