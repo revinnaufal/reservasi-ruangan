@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
@@ -19,6 +20,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ReceiptReview extends AppCompatActivity {
+
+    public PreferenceHelper pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,8 @@ public class ReceiptReview extends AppCompatActivity {
         TextView jamnow1 = (TextView) findViewById(R.id.jamnow);
         TextView jamnow2 = (TextView) findViewById(R.id.jamnowget);
 
+        //String namatext2string = pref.getRuangan();
+
         //Integer newlala = lala.setTextSize(18);
         //String newnewlala = newlala.toString();
         Document doc = new Document();
@@ -68,7 +73,10 @@ public class ReceiptReview extends AppCompatActivity {
             Calendar calendar = Calendar.getInstance();
             SimpleDateFormat cacad = new SimpleDateFormat("HH:mm:ss");
             String time = "Current Time : "+cacad.format(calendar.getTime());
+            /*Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat cacad = new SimpleDateFormat(cacad.format(calendar.getTime()));*/
             Toast.makeText(this,time,Toast.LENGTH_LONG).show();
+
 
             //Toast.makeText(this,"GENERATE BERHASIL",Toast.LENGTH_SHORT).show();
         } catch (DocumentException e) {
