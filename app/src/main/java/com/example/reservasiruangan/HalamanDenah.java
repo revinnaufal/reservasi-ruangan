@@ -7,6 +7,8 @@ import android.os.Bundle;
 import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import android.util.Log;
 import android.view.View;
 import com.google.android.material.navigation.NavigationView;
 
@@ -18,11 +20,220 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class HalamanDenah extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    public void p107 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p107);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+
+        if(namaruangan.matches("P107")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+                    }
+
+
+    }
+    public void p313 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p313);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P313")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+        }
+
+
+    }
+    public void p401 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p401);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P401")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+
+
+        }
+
+
+    }
+    public void p402 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p402);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P402")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+        }
+    }
+    public void p403 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p403);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P403")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+        }
+
+
+    }
+    public void p404 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p404);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P404")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+        }
+    }
+    public void p405 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p405);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P405")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+        }
+    }
+    public void p406 (View view){
+
+        Button bebas = (Button) findViewById(R.id.p406);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("P406")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+        }
+
+    }
+    public void o101 (View view){
+
+        Button bebas = (Button) findViewById(R.id.o101);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("O101")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+        }
+    }
+
+    public void n309 (View view){
+
+        Button bebas = (Button) findViewById(R.id.n309);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("N309")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+        }
+    }
+    public void n313 (View view){
+
+        Button bebas = (Button) findViewById(R.id.n313);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("N313")){
+
+        if(namaruangan.matches("P106")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+        }
+
+    }}
+    public void n112 (View view){
+
+        Button bebas = (Button) findViewById(R.id.n112);
+
+        String namaruangan = bebas.getText().toString();
+        PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+        pref.setRuangan(namaruangan);
+
+        if(namaruangan.matches("N112")){
+
+            Intent bebas1 = new Intent(HalamanDenah.this, DetailRuangan.class);
+            startActivity(bebas1);
+            finish();
+
+        }
+
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

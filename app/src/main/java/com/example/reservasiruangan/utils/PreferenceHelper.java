@@ -21,7 +21,10 @@ public class PreferenceHelper {
     public void setEmail(String email){
         editor.putString("email", email);
         editor.apply();
-
+    }
+    public void setRuangan(String ruangan){
+        editor.putString("ruangan", ruangan);
+        editor.apply();
     }
 
     public String getNama() {
@@ -31,4 +34,6 @@ public class PreferenceHelper {
     public String getEmail() {
         return settings.getString("email", "_");
     }
+
+    public String getRuangan() { return settings.getString("ruangan","_"); }
 }
