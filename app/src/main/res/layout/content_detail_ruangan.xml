@@ -24,12 +24,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ancol"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-4dp"
         android:orientation="vertical">
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignStart="@+id/ancol2">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -40,10 +42,12 @@
                     android:id="@+id/imageView11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxHeight="269dp"
+                    android:maxHeight="274dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/pppp" />
 
@@ -51,7 +55,10 @@
                     android:id="@+id/imageView10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
                     android:adjustViewBounds="true"
                     android:maxHeight="269dp"
                     android:scaleType="fitCenter"

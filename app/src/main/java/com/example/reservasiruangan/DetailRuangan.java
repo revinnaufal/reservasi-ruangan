@@ -54,122 +54,122 @@ public class DetailRuangan extends AppCompatActivity
         //IF ELSE BUAT RUANGAN
         if (kotakbantu.matches("P107")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P313")){
             namaruangan.setText(kotakbantu);
             spesifikasi.setText(
-                    "1.\tJumlah Kursi        :50\n"+
-                    "2.\tProyektor           : Ada\n"+
-                    "3.\tKabel Proyektor     : HDMI&VGA\n"+
-                    "4.\tPapan Tulis         : Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC                  : Tidak Aada\n");
+                    "1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P401")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P402")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P403")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
         }
         else if(kotakbantu.matches("P404")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P405")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("P406")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("N112")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("N309")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("N313")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                    "2.\tProyektor: Ada\n"+
-                    "3.\tKabel Proyektor: HDMI&VGA\n"+
-                    "4.\tPapan Tulis: Ada\n"+
-                    "5.\tSpidol dan Penghapus: Ada\n"+
-                    "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
         else if(kotakbantu.matches("O101")){
             namaruangan.setText(kotakbantu);
-            spesifikasi.setText("1.\tJumlah Kursi:50\n"+
-                "2.\tProyektor: Ada\n"+
-                "3.\tKabel Proyektor: HDMI&VGA\n"+
-                "4.\tPapan Tulis: Ada\n"+
-                "5.\tSpidol dan Penghapus: Ada\n"+
-                "6.\tAC: Tidak Aada\n");
+            spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
+                    "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
+                    "4.\tPapan Tulis\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
+                    "5.\tSpidol dan Penghapus\t: Ada\n"+
+                    "6.\tAC\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Tidak Aada\n");
 
         }
 
