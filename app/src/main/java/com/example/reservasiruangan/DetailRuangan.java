@@ -109,6 +109,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("P402")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.d1);
+            kotakbantuimage2.setImageResource(R.drawable.d2);
+            kotakbantuimage3.setImageResource(R.drawable.d3);
+            kotakbantuimage4.setImageResource(R.drawable.d4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 40\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
@@ -119,6 +123,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("P403")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.e1);
+            kotakbantuimage2.setImageResource(R.drawable.e2);
+            kotakbantuimage3.setImageResource(R.drawable.e3);
+            kotakbantuimage4.setImageResource(R.drawable.e4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 40\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
@@ -128,6 +136,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("P404")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.f1);
+            kotakbantuimage2.setImageResource(R.drawable.f2);
+            kotakbantuimage3.setImageResource(R.drawable.f3);
+            kotakbantuimage4.setImageResource(R.drawable.f4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 40\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
@@ -138,6 +150,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("P405")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.g1);
+            kotakbantuimage2.setImageResource(R.drawable.g2);
+            kotakbantuimage3.setImageResource(R.drawable.g3);
+            kotakbantuimage4.setImageResource(R.drawable.g4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 40\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
@@ -148,6 +164,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("P406")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.h1);
+            kotakbantuimage2.setImageResource(R.drawable.h2);
+            kotakbantuimage3.setImageResource(R.drawable.h3);
+            kotakbantuimage4.setImageResource(R.drawable.h4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 40\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
@@ -172,6 +192,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("N309")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.i1);
+            kotakbantuimage2.setImageResource(R.drawable.i2);
+            kotakbantuimage3.setImageResource(R.drawable.i3);
+            kotakbantuimage4.setImageResource(R.drawable.i4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+
@@ -182,6 +206,10 @@ public class DetailRuangan extends AppCompatActivity
         }
         else if(kotakbantu.matches("N313")){
             namaruangan.setText(kotakbantu);
+            kotakbantuimage1.setImageResource(R.drawable.j1);
+            kotakbantuimage2.setImageResource(R.drawable.j2);
+            kotakbantuimage3.setImageResource(R.drawable.j3);
+            kotakbantuimage4.setImageResource(R.drawable.j4);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+

@@ -21,10 +21,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ReceiptReview extends AppCompatActivity {
-    public PreferenceHelper pref;
+  
 
     public PreferenceHelper pref;
-    public TextView namanamanama,nim,ruangann,handphone,ketaranganpinjem,tanggallll;
+    public TextView namanamanama, nim, ruangann, handphone, ketaranganpinjem, tanggallll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class ReceiptReview extends AppCompatActivity {
         nim = (TextView) findViewById(R.id.nimge);
         ruangann = (TextView) findViewById(R.id.ruanganget);
         tanggallll = (TextView) findViewById(R.id.dateget);
-        ketaranganpinjem = (TextView) findViewById(R.id.keteranganget) ;
+        ketaranganpinjem = (TextView) findViewById(R.id.keteranganget);
 
         namanamanama.setText(pref.getNama());
         nim.setText(pref.getUsername());
@@ -50,7 +50,7 @@ public class ReceiptReview extends AppCompatActivity {
 
     }
 
-    public void createPDF(View view){
+    public void createPDF(View view) {
         TextView judul = (TextView) findViewById(R.id.Judul);
         TextView namatext1 = (TextView) findViewById(R.id.namatext);
         TextView namatext2 = (TextView) findViewById(R.id.namaget);
@@ -69,11 +69,10 @@ public class ReceiptReview extends AppCompatActivity {
         TextView jamnow1 = (TextView) findViewById(R.id.jamnow);
         TextView jamnow2 = (TextView) findViewById(R.id.jamnowget);
 
-<<<<<<< HEAD
-        //String namatext2string = pref.getNama();
-=======
+
+                //String namatext2string = pref.getNama();
+
         //String namatext2string = pref.getRuangan();
->>>>>>> e91cdcf547f0cd62df2c7c5b16bb8a3769e59478
 
 
         //Integer newlala = lala.setTextSize(18);
@@ -81,28 +80,28 @@ public class ReceiptReview extends AppCompatActivity {
         //String cobanamasiapaini = pref.getNama();
 
         Document doc = new Document();
-        String outpath = Environment.getExternalStorageDirectory()+"/order.pdf";
+        String outpath = Environment.getExternalStorageDirectory() + "/order.pdf";
         try {
-            PdfWriter.getInstance(doc,new FileOutputStream(outpath));
+            PdfWriter.getInstance(doc, new FileOutputStream(outpath));
             doc.open();
-            doc.add(new Paragraph("\t"+judul.getText().toString()+"\n\n"));
-            doc.add(new Paragraph(namatext1.getText().toString()+"\t\t\t\t\t\t\t\t\t\t\t\t\t:\t"+ namatext2.getText().toString()));
-            doc.add(new Paragraph(nimtext1.getText().toString()+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t:\t"+nimtext2.getText().toString()));
-            doc.add(new Paragraph(ruangan1.getText().toString()+"\t\t\t\t\t\t\t\t\t\t\t:\t"+ruangan2.getText().toString()));
-            doc.add(new Paragraph(keterangan1.getText().toString()+"\t:"+"\n"+keterangan2.getText().toString()));
-            doc.add(new Paragraph(tanggal1.getText().toString()+":\t"+tanggal2.getText().toString()));
-            doc.add(new Paragraph(jampinjem1.getText().toString()+"\t\t\t\t\t\t\t:\t"+jampinjem2.getText().toString()
-                    +jampinjem3.getText().toString()+jampinjem4.getText().toString()));
-            doc.add(new Paragraph(jamnow1.getText().toString()+"\t\t\t\t\t:\t"+jamnow2.getText().toString()));
+            doc.add(new Paragraph("\t" + judul.getText().toString() + "\n\n"));
+            doc.add(new Paragraph(namatext1.getText().toString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t:\t" + namatext2.getText().toString()));
+            doc.add(new Paragraph(nimtext1.getText().toString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t:\t" + nimtext2.getText().toString()));
+            doc.add(new Paragraph(ruangan1.getText().toString() + "\t\t\t\t\t\t\t\t\t\t\t:\t" + ruangan2.getText().toString()));
+            doc.add(new Paragraph(keterangan1.getText().toString() + "\t:" + "\n" + keterangan2.getText().toString()));
+            doc.add(new Paragraph(tanggal1.getText().toString() + ":\t" + tanggal2.getText().toString()));
+            doc.add(new Paragraph(jampinjem1.getText().toString() + "\t\t\t\t\t\t\t:\t" + jampinjem2.getText().toString()
+                    + jampinjem3.getText().toString() + jampinjem4.getText().toString()));
+            doc.add(new Paragraph(jamnow1.getText().toString() + "\t\t\t\t\t:\t" + jamnow2.getText().toString()));
             doc.close();
             //Date currentTime = Calendar.getInstance().getTime().toString();
             //Toast.makeText(this,currentTime,Toast.LENGTH_LONG).show();
             Calendar calendar = Calendar.getInstance();
             SimpleDateFormat cacad = new SimpleDateFormat("HH:mm:ss");
-            String time = "Current Time : "+cacad.format(calendar.getTime());
+            String time = "Current Time : " + cacad.format(calendar.getTime());
             /*Calendar calendar = Calendar.getInstance();
             SimpleDateFormat cacad = new SimpleDateFormat(cacad.format(calendar.getTime()));*/
-            Toast.makeText(this,time,Toast.LENGTH_LONG).show();
+            Toast.makeText(this, time, Toast.LENGTH_LONG).show();
 
 
             //Toast.makeText(this,"GENERATE BERHASIL",Toast.LENGTH_SHORT).show();
