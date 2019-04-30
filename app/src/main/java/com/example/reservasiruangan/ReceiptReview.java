@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.Preference;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ReceiptReview extends AppCompatActivity {
+    public PreferenceHelper pref;
 
     public PreferenceHelper pref;
     public TextView namanamanama,nim,ruangann,handphonecaw,ketaranganpinjem,tanggallll,jamsekarangbanget,inispin1,inispin2;
@@ -89,7 +91,11 @@ public class ReceiptReview extends AppCompatActivity {
         TextView jamnow1 = (TextView) findViewById(R.id.jamnow);
         TextView jamnow2 = (TextView) findViewById(R.id.jamnowget);
 
+<<<<<<< HEAD
+        //String namatext2string = pref.getNama();
+=======
         //String namatext2string = pref.getRuangan();
+>>>>>>> e91cdcf547f0cd62df2c7c5b16bb8a3769e59478
 
 
         //Integer newlala = lala.setTextSize(18);
