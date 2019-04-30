@@ -38,12 +38,16 @@ public class PreferenceHelper {
         editor.putString("tanggal", tanggal);
         editor.apply();
     }
-    public void fidgetspinner1(String fidgetspinner1){
+    public void setfidgetspinner1(String fidgetspinner1){
         editor.putString("fidgetspinnger1", fidgetspinner1);
         editor.apply();
     }
-    public void fidgetspinner2(String fidgetspinner2){
+    public void setfidgetspinner2(String fidgetspinner2){
         editor.putString("fidgetspinnger2", fidgetspinner2);
+        editor.apply();
+    }
+    public void sethp(String hp){
+        editor.putString("hp", hp);
         editor.apply();
     }
 
@@ -67,4 +71,6 @@ public class PreferenceHelper {
     public String getfidgetspinner1(){return settings.getString("fidgetspinner1","_");}
 
     public String getfidgetspinner2(){return settings.getString("fidgetspinner2","_");}
+
+    public String gethp(){return settings.getString("hp","_");}
 }

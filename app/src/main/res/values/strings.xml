@@ -16,5 +16,6 @@
     <string name="title_activity_aboutus">aboutus</string>
     <string name="title_activity_detail_ruangan">DetailRuangan</string>
     <string name="title_activity_formpesen">formpesen</string>
+    <string name="title_activity_mybooking">mybooking</string>
 
 </resources>
