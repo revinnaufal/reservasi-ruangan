@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.Preference;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
@@ -19,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ReceiptReview extends AppCompatActivity {
+    public PreferenceHelper pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,9 @@ public class ReceiptReview extends AppCompatActivity {
         TextView jampinjem4 = (TextView) findViewById(R.id.spin2);
         TextView jamnow1 = (TextView) findViewById(R.id.jamnow);
         TextView jamnow2 = (TextView) findViewById(R.id.jamnowget);
+
+        //String namatext2string = pref.getNama();
+
 
         //Integer newlala = lala.setTextSize(18);
         //String newnewlala = newlala.toString();
