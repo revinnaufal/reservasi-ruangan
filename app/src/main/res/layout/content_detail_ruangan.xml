@@ -47,7 +47,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxHeight="274dp"
+                    android:maxHeight="270dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/pppp" />
 
@@ -60,7 +60,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:adjustViewBounds="true"
-                    android:maxHeight="269dp"
+                    android:maxHeight="270dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/pp" />
 
@@ -71,7 +71,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxHeight="269dp"
+                    android:maxHeight="270dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/ppp" />
 
@@ -85,7 +85,7 @@
                     android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
-                    android:maxWidth="355dp"
+                    android:maxWidth="358dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/p" />
 
