@@ -92,10 +92,12 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
 
                         String namastring = user.getString("nama");
                         String emailstring = user.getString("email");
+                        String userstring = user.getString("username");
 
                         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
                         pref.setNama(namastring);
                         pref.setEmail(emailstring);
+                        pref.setUsername(userstring);
 
 
                     }else{

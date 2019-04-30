@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DIbooking pada jam\t\t\t\t\t\t\t\t: " />
+            android:text="DIbooking pada jam\t\t\t\t\t\t\t\t  " />
 
         <TextView
             android:id="@+id/jamnowget"
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Jam Peminjaman\t\t\t\t\t\t\t\t\t\t: " />
+            android:text="Jam Peminjaman\t\t\t\t\t\t\t\t\t\t  " />
 
         <TextView
             android:id="@+id/spin1"
@@ -99,14 +99,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Peminjaman untuk Tanggal : " />
+            android:text="Peminjaman untuk Tanggal   " />
 
         <TextView
             android:id="@+id/dateget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="TextView " />
 
     </LinearLayout>
 
@@ -121,7 +121,7 @@
             android:id="@+id/keterangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Keterangan Peminjaman \t\t\t:" />
+            android:text="Keterangan Peminjaman \t\t\t  " />
 
         <TextView
             android:id="@+id/keteranganget"
@@ -141,7 +141,7 @@
             android:id="@+id/nohp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No. Handphone \t\t\t\t\t\t\t\t\t\t\t: " />
+            android:text="No. Handphone \t\t\t\t\t\t\t\t\t\t\t  " />
 
         <TextView
             android:id="@+id/nohpget"
@@ -162,7 +162,7 @@
             android:id="@+id/namatext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: " />
+            android:text="Nama\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  " />
 
         <TextView
             android:id="@+id/namaget"
@@ -183,7 +183,7 @@
             android:id="@+id/ruangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ruangan\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t: " />
+            android:text="Ruangan\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t  " />
 
         <TextView
             android:id="@+id/ruanganget"
@@ -204,7 +204,7 @@
             android:id="@+id/NIM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NIM\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: " />
+            android:text="NIM\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  " />
 
         <TextView
             android:id="@+id/nimge"
