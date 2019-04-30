@@ -21,6 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,7 @@ public class DetailRuangan extends AppCompatActivity
 
     }
     public TextView namaruangan,spesifikasi;
+    public ImageView kotakbantuimage;
 
     // TextView namaruangan,spesifikasi;
 
@@ -49,11 +51,16 @@ public class DetailRuangan extends AppCompatActivity
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
         namaruangan = (TextView) findViewById(R.id.ancol);
         spesifikasi = findViewById(R.id.spesifikasi);
+        kotakbantuimage = (ImageView) findViewById(R.id.imageView11);
+
+
+
         String kotakbantu = pref.getRuangan();
 
         //IF ELSE BUAT RUANGAN
         if (kotakbantu.matches("P107")){
             namaruangan.setText(kotakbantu);
+            //kotakbantuimage.setImageResource(R.drawable.homer);
             spesifikasi.setText("1.\tJumlah Kursi\t\t\t\t\t\t\t\t\t\t: 50\n"+
                     "2.\tProyektor\t\t\t\t\t\t\t\t\t\t\t\t\t\t: Ada\n"+
                     "3.\tKabel Proyektor\t\t\t\t\t\t\t\t: HDMI&VGA\n"+

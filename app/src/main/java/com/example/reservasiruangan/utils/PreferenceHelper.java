@@ -26,6 +26,27 @@ public class PreferenceHelper {
         editor.putString("ruangan", ruangan);
         editor.apply();
     }
+    public void setUsername(String username){
+        editor.putString("username", username);
+        editor.apply();
+    }
+    public void setKeterangan(String keterangan){
+        editor.putString("keterangan", keterangan);
+        editor.apply();
+    }
+    public void settanggal(String tanggal){
+        editor.putString("tanggal", tanggal);
+        editor.apply();
+    }
+    public void fidgetspinner1(String fidgetspinner1){
+        editor.putString("fidgetspinnger1", fidgetspinner1);
+        editor.apply();
+    }
+    public void fidgetspinner2(String fidgetspinner2){
+        editor.putString("fidgetspinnger2", fidgetspinner2);
+        editor.apply();
+    }
+
 
     public String getNama() {
         return settings.getString("nama", "_");
@@ -36,4 +57,14 @@ public class PreferenceHelper {
     }
 
     public String getRuangan() { return settings.getString("ruangan","_"); }
+
+    public String getUsername() {return settings.getString("username","_"); }
+
+    public String getKeterangan(){return settings.getString("keterangan","_");}
+
+    public String gettanggal(){return settings.getString("tanggal","_");}
+
+    public String getfidgetspinner1(){return settings.getString("fidgetspinner1","_");}
+
+    public String getfidgetspinner2(){return settings.getString("fidgetspinner2","_");}
 }

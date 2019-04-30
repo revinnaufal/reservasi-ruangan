@@ -22,11 +22,30 @@ import java.util.Calendar;
 public class ReceiptReview extends AppCompatActivity {
 
     public PreferenceHelper pref;
+    public TextView namanamanama,nim,ruangann,handphone,ketaranganpinjem,tanggallll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receipt_review);
+        pref = new PreferenceHelper(getApplicationContext());
+
+        namanamanama = (TextView) findViewById(R.id.namaget);
+        nim = (TextView) findViewById(R.id.nimge);
+        ruangann = (TextView) findViewById(R.id.ruanganget);
+        tanggallll = (TextView) findViewById(R.id.dateget);
+        ketaranganpinjem = (TextView) findViewById(R.id.keteranganget) ;
+
+        namanamanama.setText(pref.getNama());
+        nim.setText(pref.getUsername());
+        ruangann.setText(pref.getRuangan());
+        tanggallll.setText(pref.gettanggal());
+        ketaranganpinjem.setText(pref.getKeterangan());
+
+
+        //Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_SHORT).show();
+
+
     }
 
     public void createPDF(View view){
@@ -41,7 +60,7 @@ public class ReceiptReview extends AppCompatActivity {
         TextView keterangan2 = (TextView) findViewById(R.id.keteranganget);
         TextView tanggal1 = (TextView) findViewById(R.id.peminjaman);
         TextView tanggal2 = (TextView) findViewById(R.id.dateget);
-        TextView jampinjem1 = (TextView) findViewById(R.id.peminjaman);
+        TextView jampinjem1 = (TextView) findViewById(R.id.jampinjemget);
         TextView jampinjem2 = (TextView) findViewById(R.id.spin1);
         TextView jampinjem3 = (TextView) findViewById(R.id.sd);
         TextView jampinjem4 = (TextView) findViewById(R.id.spin2);
@@ -50,23 +69,25 @@ public class ReceiptReview extends AppCompatActivity {
 
         //String namatext2string = pref.getRuangan();
 
+
         //Integer newlala = lala.setTextSize(18);
         //String newnewlala = newlala.toString();
+        //String cobanamasiapaini = pref.getNama();
+
         Document doc = new Document();
         String outpath = Environment.getExternalStorageDirectory()+"/order.pdf";
         try {
             PdfWriter.getInstance(doc,new FileOutputStream(outpath));
             doc.open();
             doc.add(new Paragraph("\t"+judul.getText().toString()+"\n\n"));
-            doc.add(new Paragraph(namatext1.getText().toString()+namatext2.getText().toString()));
-            doc.add(new Paragraph(nimtext1.getText().toString()+nimtext2.getText().toString()));
-            doc.add(new Paragraph(ruangan1.getText().toString()+ruangan2.getText().toString()));
-            doc.add(new Paragraph(keterangan1.getText().toString()+"\n"+keterangan2.getText().toString()));
-            doc.add(new Paragraph(tanggal1.getText().toString()+tanggal2.getText().toString()));
-            doc.add(new Paragraph(jampinjem1.getText().toString()+jampinjem2.getText().toString()
+            doc.add(new Paragraph(namatext1.getText().toString()+"\t\t\t\t\t\t\t\t\t\t\t\t\t:\t"+ namatext2.getText().toString()));
+            doc.add(new Paragraph(nimtext1.getText().toString()+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t:\t"+nimtext2.getText().toString()));
+            doc.add(new Paragraph(ruangan1.getText().toString()+"\t\t\t\t\t\t\t\t\t\t\t:\t"+ruangan2.getText().toString()));
+            doc.add(new Paragraph(keterangan1.getText().toString()+"\t:"+"\n"+keterangan2.getText().toString()));
+            doc.add(new Paragraph(tanggal1.getText().toString()+":\t"+tanggal2.getText().toString()));
+            doc.add(new Paragraph(jampinjem1.getText().toString()+"\t\t\t\t\t\t\t:\t"+jampinjem2.getText().toString()
                     +jampinjem3.getText().toString()+jampinjem4.getText().toString()));
-            doc.add(new Paragraph(jamnow1.getText().toString()+jamnow2.getText().toString()));
-
+            doc.add(new Paragraph(jamnow1.getText().toString()+"\t\t\t\t\t:\t"+jamnow2.getText().toString()));
             doc.close();
             //Date currentTime = Calendar.getInstance().getTime().toString();
             //Toast.makeText(this,currentTime,Toast.LENGTH_LONG).show();

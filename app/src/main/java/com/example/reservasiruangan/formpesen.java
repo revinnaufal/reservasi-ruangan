@@ -40,7 +40,7 @@ import java.util.Locale;
 public class formpesen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public TextView nama,nim,ruangan, nama2, tanggal;
+    public TextView nama,nim,ruangan, nama2, tanggal, keterangannn;
     public PreferenceHelper pref;
     public DatePickerDialog datePickerDialog;
     public SimpleDateFormat dateFormatter;
@@ -49,7 +49,20 @@ public class formpesen extends AppCompatActivity
     public void pdfandgenerate(View view){
 
         Intent pdf = new Intent(this,ReceiptReview.class);
+        //MULAI NYIMPEN DI PREFERENCE HELPER
+        pref = new PreferenceHelper(getApplicationContext());
+        tanggal = findViewById(R.id.texttanggalget);
+        keterangannn = findViewById(R.id.editText4);
+        String tanggalstring = tanggal.getText().toString();
+        String keteranganstring = keterangannn.getText().toString();
+        pref.settanggal(tanggalstring);
+        pref.setKeterangan(keteranganstring);
+
+
         startActivity(pdf);
+
+
+
 
     }
 
@@ -81,7 +94,7 @@ public class formpesen extends AppCompatActivity
         nim = (TextView) findViewById(R.id.textNIMget);
         ruangan = (TextView) findViewById(R.id.ruangan);
         nama.setText(pref.getNama());
-        nim.setText(pref.getEmail());
+        nim.setText(pref.getUsername());
         ruangan.setText(pref.getRuangan());
 
         //Definissin Spinner
@@ -114,8 +127,6 @@ public class formpesen extends AppCompatActivity
             }
 
         });*/
-
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
