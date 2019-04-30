@@ -22,7 +22,7 @@ import java.util.Calendar;
 public class ReceiptReview extends AppCompatActivity {
 
     public PreferenceHelper pref;
-    public TextView namanamanama,nim,ruangann,handphone,ketaranganpinjem,tanggallll;
+    public TextView namanamanama,nim,ruangann,handphonecaw,ketaranganpinjem,tanggallll,jamsekarangbanget,inispin1,inispin2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +35,34 @@ public class ReceiptReview extends AppCompatActivity {
         ruangann = (TextView) findViewById(R.id.ruanganget);
         tanggallll = (TextView) findViewById(R.id.dateget);
         ketaranganpinjem = (TextView) findViewById(R.id.keteranganget) ;
+        handphonecaw = (TextView) findViewById(R.id.nohpget);
+        jamsekarangbanget = (TextView) findViewById(R.id.jamnowget);
+        inispin1 = (TextView) findViewById(R.id.spin1);
+        inispin2 = (TextView) findViewById(R.id.spin2);
+
+
+        //DEFINISIIN JAM SEKARANG
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat cacad = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat currentdate = new SimpleDateFormat("dd-MM-yyyy");
+        String time = "Current Time : "+cacad.format(calendar.getTime());
+            /*Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat cacad = new SimpleDateFormat(cacad.format(calendar.getTime()));*/
+        String date = currentdate.format(calendar.getTime());
+        //Toast.makeText(this,time,Toast.LENGTH_LONG).show();
+        //DEFINISIIN JAM SEKARANG BERES
 
         namanamanama.setText(pref.getNama());
         nim.setText(pref.getUsername());
         ruangann.setText(pref.getRuangan());
         tanggallll.setText(pref.gettanggal());
         ketaranganpinjem.setText(pref.getKeterangan());
+        handphonecaw.setText(pref.gethp());
+        inispin1.setText(pref.getfidgetspinner1());
+        inispin2.setText(pref.getfidgetspinner2());
+        jamsekarangbanget.setText(date + ", "+cacad.format(calendar.getTime()));
+
+
 
 
         //Toast.makeText(this,pref.getRuangan(),Toast.LENGTH_SHORT).show();
@@ -91,12 +113,7 @@ public class ReceiptReview extends AppCompatActivity {
             doc.close();
             //Date currentTime = Calendar.getInstance().getTime().toString();
             //Toast.makeText(this,currentTime,Toast.LENGTH_LONG).show();
-            Calendar calendar = Calendar.getInstance();
-            SimpleDateFormat cacad = new SimpleDateFormat("HH:mm:ss");
-            String time = "Current Time : "+cacad.format(calendar.getTime());
-            /*Calendar calendar = Calendar.getInstance();
-            SimpleDateFormat cacad = new SimpleDateFormat(cacad.format(calendar.getTime()));*/
-            Toast.makeText(this,time,Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"PDF BERHASIL DIBUAT :)",Toast.LENGTH_SHORT).show();
 
 
             //Toast.makeText(this,"GENERATE BERHASIL",Toast.LENGTH_SHORT).show();

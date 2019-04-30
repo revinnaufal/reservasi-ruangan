@@ -123,7 +123,11 @@ public class HalamanAwal extends AppCompatActivity
 
         if (id == R.id.nav_booking) {
             // Handle the camera action
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            Intent mybooking = new Intent(HalamanAwal.this, com.example.reservasiruangan.mybooking.class);
+            startActivity(mybooking);
+            finish();
+
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {

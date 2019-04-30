@@ -25,6 +25,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -40,29 +41,55 @@ import java.util.Locale;
 public class formpesen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public TextView nama,nim,ruangan, nama2, tanggal, keterangannn;
+    public TextView nama,nim,ruangan, nama2, tanggal, keterangannn, handphone;
     public PreferenceHelper pref;
     public DatePickerDialog datePickerDialog;
     public SimpleDateFormat dateFormatter;
     public ImageView kalender;
+    public Spinner spinnerfidget,spinnerfidget2;
 
     public void pdfandgenerate(View view){
 
-        Intent pdf = new Intent(this,ReceiptReview.class);
-        //MULAI NYIMPEN DI PREFERENCE HELPER
-        pref = new PreferenceHelper(getApplicationContext());
+        /*nama = (TextView) findViewById(R.id.textNamaget);
+        nim = (TextView) findViewById(R.id.textNIMget);
+        ruangan = (TextView) findViewById(R.id.ruangan);*/
+        EditText coba = (EditText) findViewById(R.id.editText);
+        EditText coba2 = (EditText) findViewById(R.id.editText4);
         tanggal = findViewById(R.id.texttanggalget);
-        keterangannn = findViewById(R.id.editText4);
-        String tanggalstring = tanggal.getText().toString();
-        String keteranganstring = keterangannn.getText().toString();
-        pref.settanggal(tanggalstring);
-        pref.setKeterangan(keteranganstring);
+        String cobastring = coba.getText().toString();
+        String coba2string = coba2.getText().toString();
+
+        if(cobastring.matches("")||coba2string.matches("")||tanggal.getText().toString().matches("DD/MM/YYYY")){
+
+            Toast.makeText(this,"Harap isi semua form terlebih dahulu",Toast.LENGTH_LONG).show();
+        }
+        else {
+            Intent pdf = new Intent(this,ReceiptReview.class);
+            //MULAI NYIMPEN DI PREFERENCE HELPER
+            pref = new PreferenceHelper(getApplicationContext());
+
+            keterangannn = findViewById(R.id.editText4);
+            handphone = findViewById(R.id.editText);
+            spinnerfidget = findViewById(R.id.spinner);
+            spinnerfidget2 = findViewById(R.id.spinner2);
+
+            String tanggalstring = tanggal.getText().toString();
+            String keteranganstring = keterangannn.getText().toString();
+            String handphoneee = handphone.getText().toString();
+            String fidgetspinner1 = spinnerfidget.getSelectedItem().toString();
+            String fidgetspinner2 = spinnerfidget2.getSelectedItem().toString();
+
+            pref.settanggal(tanggalstring);
+            pref.setKeterangan(keteranganstring);   
+            pref.sethp(handphoneee);
+            pref.setfidgetspinner1(fidgetspinner1);
+            pref.setfidgetspinner2(fidgetspinner2);
+            Toast.makeText(this,fidgetspinner1,Toast.LENGTH_SHORT).show();
 
 
-        startActivity(pdf);
+            startActivity(pdf);
 
-
-
+        }
 
     }
 
