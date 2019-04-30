@@ -266,11 +266,14 @@ public class HalamanDenah extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+        else {
             super.onBackPressed();
             Intent HalamanAwal = new Intent(HalamanDenah.this, com.example.reservasiruangan.HalamanAwal.class);
             startActivity(HalamanAwal);
+
         }
+
     }
 
     @Override
@@ -310,6 +313,42 @@ public class HalamanDenah extends AppCompatActivity
 
         if (id == R.id.nav_booking) {
             // Handle the camera action
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            Intent mybooking = new Intent(HalamanDenah.this, com.example.reservasiruangan.mybooking.class);
+            startActivity(mybooking);
+            finish();
+        } else if (id == R.id.nav_setting) {
+            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_aboutus) {
+
+
+            Intent cacat = new Intent(HalamanDenah.this,aboutus.class);
+            startActivity(cacat); finish();
+        } else if (id == R.id.nav_logout) {
+
+            new AlertDialog.Builder(HalamanDenah.this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("Logout Notification")
+                    .setMessage("Apakah anda yakin akan logout?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Intent home = new Intent(HalamanAwal.this,MainActivity.class);
+                            //startActivity(home);
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("No",null)
+                    .show();
+
+
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+
+        }
+        /*int id = item.getItemId();
+
+        if (id == R.id.nav_booking) {
+            // Handle the camera action
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
@@ -335,7 +374,7 @@ public class HalamanDenah extends AppCompatActivity
                     .show();
             //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

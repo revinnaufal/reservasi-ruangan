@@ -237,10 +237,15 @@ public class formpesen extends AppCompatActivity
 
         if (id == R.id.nav_booking) {
             // Handle the camera action
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            Intent mybooking = new Intent(formpesen.this, com.example.reservasiruangan.mybooking.class);
+            startActivity(mybooking);
+            finish();
+
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {
+
 
             Intent cacat = new Intent(formpesen.this,aboutus.class);
             startActivity(cacat); finish();

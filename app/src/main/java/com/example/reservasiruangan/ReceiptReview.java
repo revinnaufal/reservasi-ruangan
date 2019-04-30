@@ -24,11 +24,11 @@ public class ReceiptReview extends AppCompatActivity {
   
 
     public PreferenceHelper pref;
-<<<<<<< HEAD
-    public TextView namanamanama, nim, ruangann, handphone, ketaranganpinjem, tanggallll;
-=======
+
+    //public TextView namanamanama, nim, ruangann, handphone, ketaranganpinjem, tanggallll;
+
     public TextView namanamanama,nim,ruangann,handphonecaw,ketaranganpinjem,tanggallll,jamsekarangbanget,inispin1,inispin2;
->>>>>>> 830d6a2a41a7b35125ff78e4a0406c84a31de3ea
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,9 @@ public class ReceiptReview extends AppCompatActivity {
         nim = (TextView) findViewById(R.id.nimge);
         ruangann = (TextView) findViewById(R.id.ruanganget);
         tanggallll = (TextView) findViewById(R.id.dateget);
-<<<<<<< HEAD
+
         ketaranganpinjem = (TextView) findViewById(R.id.keteranganget);
-=======
+
         ketaranganpinjem = (TextView) findViewById(R.id.keteranganget) ;
         handphonecaw = (TextView) findViewById(R.id.nohpget);
         jamsekarangbanget = (TextView) findViewById(R.id.jamnowget);
@@ -60,7 +60,7 @@ public class ReceiptReview extends AppCompatActivity {
         String date = currentdate.format(calendar.getTime());
         //Toast.makeText(this,time,Toast.LENGTH_LONG).show();
         //DEFINISIIN JAM SEKARANG BERES
->>>>>>> 830d6a2a41a7b35125ff78e4a0406c84a31de3ea
+
 
         namanamanama.setText(pref.getNama());
         nim.setText(pref.getUsername());
@@ -126,16 +126,16 @@ public class ReceiptReview extends AppCompatActivity {
             doc.close();
             //Date currentTime = Calendar.getInstance().getTime().toString();
             //Toast.makeText(this,currentTime,Toast.LENGTH_LONG).show();
-<<<<<<< HEAD
+
             Calendar calendar = Calendar.getInstance();
             SimpleDateFormat cacad = new SimpleDateFormat("HH:mm:ss");
             String time = "Current Time : " + cacad.format(calendar.getTime());
             /*Calendar calendar = Calendar.getInstance();
             SimpleDateFormat cacad = new SimpleDateFormat(cacad.format(calendar.getTime()));*/
             Toast.makeText(this, time, Toast.LENGTH_LONG).show();
-=======
+
             Toast.makeText(this,"PDF BERHASIL DIBUAT :)",Toast.LENGTH_SHORT).show();
->>>>>>> 830d6a2a41a7b35125ff78e4a0406c84a31de3ea
+
 
 
             //Toast.makeText(this,"GENERATE BERHASIL",Toast.LENGTH_SHORT).show();
