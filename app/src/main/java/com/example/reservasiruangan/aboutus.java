@@ -101,7 +101,8 @@ public class aboutus extends AppCompatActivity
 
          if (id == R.id.nav_booking) {
             // Handle the camera action
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+             Intent cacat1 = new Intent(aboutus.this,mybooking.class);
+             startActivity(cacat1); finish();
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_aboutus) {
