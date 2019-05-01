@@ -51,6 +51,7 @@ public class DetailRuangan extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_ruangan);
 
+
         PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
         namaruangan = (TextView) findViewById(R.id.ancol);
         spesifikasi = findViewById(R.id.spesifikasi);
@@ -274,6 +275,14 @@ public class DetailRuangan extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
     }
@@ -327,7 +336,10 @@ public class DetailRuangan extends AppCompatActivity
 
         if (id == R.id.nav_booking) {
             // Handle the camera action
-            Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();
+            Intent mybooking = new Intent(DetailRuangan.this, com.example.reservasiruangan.mybooking.class);
+            startActivity(mybooking);
+            finish();
 
         } else if (id == R.id.nav_setting) {
             Toast.makeText(this, "HEhehehe", Toast.LENGTH_SHORT).show();

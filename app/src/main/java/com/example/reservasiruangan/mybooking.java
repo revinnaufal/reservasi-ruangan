@@ -8,9 +8,14 @@ import com.example.reservasiruangan.utils.PreferenceHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.util.Log;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
@@ -21,8 +26,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class mybooking extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -51,6 +62,56 @@ public class mybooking extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //MULAI TAMPILIN KE LISTVIEW MANTAP
+
+        final PreferenceHelper pref = new PreferenceHelper(getApplicationContext());
+
+
+        final ListView cacadbanget = (ListView) findViewById(R.id.listviewcoba);
+
+        //ArrayList<String> usernames = new ArrayList<String>();
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("tabelbookruangan");
+        query.whereEqualTo("nim",pref.getUsername());
+        //query.addAscendingOrder("ruangan");
+        final ArrayList<String> arrayruangan = new ArrayList<String>();
+
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if(e == null){
+
+
+                    if (objects.size()>0){
+                        for (ParseObject tabelbookruangan:objects){
+
+                            arrayruangan.add(tabelbookruangan.getString("ruangan"));
+                        }
+                        ArrayAdapter arrayAdapter = new ArrayAdapter(mybooking.this, android.R.layout.simple_list_item_1, arrayruangan);
+                        cacadbanget.setAdapter(arrayAdapter);
+                    }
+
+                }
+            }
+        });
+        cacadbanget.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(mybooking.this,"yang ke klik adalah "+cacadbanget.getSelectedItem().toString());
+                //Log.d("Yang keklik adalah : ",cacadbanget.getItemAtPosition(position).toString());
+                pref.setRuangan(cacadbanget.getItemAtPosition(position).toString());
+                Intent barubaru = new Intent(mybooking.this,detailbooking.class);
+                startActivity(barubaru);
+            }
+        });
+
+        //usernames.add("TEST");
+
+
+
+        //BERES TAMPILIN KE LISTVIEW MANTAP
+
+
     }
 
     @Override

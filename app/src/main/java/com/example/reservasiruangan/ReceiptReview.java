@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.Preference;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +15,9 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.SaveCallback;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -98,6 +102,8 @@ public class ReceiptReview extends AppCompatActivity {
         TextView jampinjem4 = (TextView) findViewById(R.id.spin2);
         TextView jamnow1 = (TextView) findViewById(R.id.jamnow);
         TextView jamnow2 = (TextView) findViewById(R.id.jamnowget);
+        TextView nohp1 = (TextView) findViewById(R.id.nohp);
+        TextView nohp2 = (TextView) findViewById(R.id.nohpget);
 
 
                 //String namatext2string = pref.getNama();
@@ -119,6 +125,7 @@ public class ReceiptReview extends AppCompatActivity {
             doc.add(new Paragraph(nimtext1.getText().toString() + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t:\t" + nimtext2.getText().toString()));
             doc.add(new Paragraph(ruangan1.getText().toString() + "\t\t\t\t\t\t\t\t\t\t\t:\t" + ruangan2.getText().toString()));
             doc.add(new Paragraph(keterangan1.getText().toString() + "\t:" + "\n" + keterangan2.getText().toString()));
+            doc.add(new Paragraph(nohp1.getText().toString()+"\t\t\t\t\t\t\t\t:\t"+nohp2.getText().toString()));
             doc.add(new Paragraph(tanggal1.getText().toString() + ":\t" + tanggal2.getText().toString()));
             doc.add(new Paragraph(jampinjem1.getText().toString() + "\t\t\t\t\t\t\t:\t" + jampinjem2.getText().toString()
                     + jampinjem3.getText().toString() + jampinjem4.getText().toString()));
@@ -136,14 +143,38 @@ public class ReceiptReview extends AppCompatActivity {
 
             Toast.makeText(this,"PDF BERHASIL DIBUAT :)",Toast.LENGTH_SHORT).show();
 
-
-
             //Toast.makeText(this,"GENERATE BERHASIL",Toast.LENGTH_SHORT).show();
+            ParseObject tabelbookruangan = new ParseObject("tabelbookruangan");
+            tabelbookruangan.put("nama",namatext2.getText().toString());
+            tabelbookruangan.put("nim", nimtext2.getText().toString());
+            tabelbookruangan.put("ruangan", ruangan2.getText().toString());
+            tabelbookruangan.put("tanggalpeminjaman", tanggal2.getText().toString());
+            tabelbookruangan.put("waktupinejm", jampinjem2.getText().toString()+" s.d. "+jampinjem4.getText().toString());
+            tabelbookruangan.put("keterangan", keterangan2.getText().toString());
+            tabelbookruangan.put("dipinjampada", jamnow2.getText().toString());
+            tabelbookruangan.put("nohp",nohp2.getText().toString());
+            tabelbookruangan.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if(e == null){
+                        Log.i("Save in background", "Success");
+
+                    } else {
+                        Log.i("Save in background","Failed");
+                    }
+                }
+            });
+
+
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+
+
+
 
     }
 }

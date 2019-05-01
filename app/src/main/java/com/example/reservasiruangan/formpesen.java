@@ -33,9 +33,11 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class formpesen extends AppCompatActivity
@@ -84,7 +86,7 @@ public class formpesen extends AppCompatActivity
             pref.sethp(handphoneee);
             pref.setfidgetspinner1(fidgetspinner1);
             pref.setfidgetspinner2(fidgetspinner2);
-            Toast.makeText(this,fidgetspinner1,Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,pref.getfidgetspinner1(),Toast.LENGTH_SHORT).show();
 
 
             startActivity(pdf);
@@ -93,7 +95,7 @@ public class formpesen extends AppCompatActivity
 
     }
 
-    public void showDateDialog(View view){
+    public void showDateDialog(View view) throws ParseException {
 
         Calendar newCalendar = Calendar.getInstance();
         datePickerDialog = new DatePickerDialog(formpesen.this, new DatePickerDialog.OnDateSetListener(){
@@ -108,6 +110,12 @@ public class formpesen extends AppCompatActivity
 
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        Calendar tampan = Calendar.getInstance();
+        SimpleDateFormat currentdate = new SimpleDateFormat("dd-MM-yyyy");
+        String date = currentdate.format(tampan.getTime());
+        Date d = currentdate.parse(date);
+
+        datePickerDialog.getDatePicker().setMinDate(d.getTime());
         datePickerDialog.show();
     }
 

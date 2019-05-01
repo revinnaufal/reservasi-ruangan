@@ -39,11 +39,11 @@ public class PreferenceHelper {
         editor.apply();
     }
     public void setfidgetspinner1(String fidgetspinner1){
-        editor.putString("fidgetspinnger1", fidgetspinner1);
+        editor.putString("fidgetspinner1", fidgetspinner1);
         editor.apply();
     }
     public void setfidgetspinner2(String fidgetspinner2){
-        editor.putString("fidgetspinnger2", fidgetspinner2);
+        editor.putString("fidgetspinner2", fidgetspinner2);
         editor.apply();
     }
     public void sethp(String hp){
