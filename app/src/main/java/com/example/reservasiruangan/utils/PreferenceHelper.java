@@ -4,15 +4,20 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class PreferenceHelper {
+    //Properti START
     private String key = "Revinganteng";
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
+    //PROPERTI END
 
+
+    //Constructor START
     public PreferenceHelper(Context context) {
         settings = context.getSharedPreferences(key, 0);
         editor = settings.edit();
     }
+    //CONSTRUCTOR END
 
     public void setNama(String nama) {
         editor.putString("nama", nama);
